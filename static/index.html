@@ -2,13 +2,11 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Votre Site Web</title>
-    <link rel="stylesheet" href="../style/styles.css">
-    <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
-    <script src="../JS/script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Votre Site Web</title>
+	<link rel="stylesheet" href="../style/styles.css" media="all">
+	<script src="../JS/script.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -16,81 +14,111 @@
             <div class="logo">SuperShop</div>
             <ul class="nav-list">
                 <li class="menu-deroulant"><a href="../static/index.html">Accueil</a></li>
-                <li class="menu-deroulant"><a href="#">Products</a>
+                <li class="menu-deroulant"><a>Products</a>
                     <ul class="sous">
-                        <li><a href="img/Alex.pdf"><span class="hover-underline-animation">Produit phare</span></a></li>
-                        <li><a href="img/perez.pdf"><span class="hover-underline-animation">Motivation</span></a></li>
+                        <li><a href="#my_product"><span class="hover-underline-animation">Produit phare</span></a></li>
                     </ul>
                 </li>
-                <li class="menu-deroulant"><a href="#">About Us</a>
+                <li class="menu-deroulant"><a href="#video">About Us</a>
                 </li>
-                <li class="menu-deroulant"><a href="contact">Contact</a>
+                <li class="menu-deroulant"><a href="#contact">Contact</a>
                 </li>
+				<li class="menu-deroulant">
+					<img src="../img/panier.png" alt="ImgPanier" class="header_link-less"/>
+				</li>
             </ul>
-            <button>Inscription</button>
-            <button>Log In</button>
         </nav>
+
+		<div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="navigation__button">
+              <span class="navigation__icon" aria-label="toggle navigation menu"></span>
+            </label>
+            <div class="navigation__background"></div>
+      
+            <nav class="navigation__nav" role="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                    	<a href="../static/index.html" class="navigation__link"><span>01</span>Accueil</a>
+                    </li>
+                    <li class="navigation__item">
+                    <a href="#" class="navigation__link"><span>02</span>Products</a>
+                        <ul class="sous">
+                            <li><a href="#my_product" class="navigation__link"><span class="hover-underline-animation">Produit phare</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item">
+						<a href="#video" class="navigation__link">About Us</a>
+                    </li>
+                    <li class="navigation__item">
+						<a href="#contact" class="navigation__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="section-products">
-		<div class="custom-container">
-			<div class="custom-rows">
+    <section id="section-products" class="section-products">
+		<div>
+			<div class="custom-container">
+				<div class="custom-rows">
+						<div class="custom-col">
+								<div class="header">
+										<h2>Nos Meilleurs Ventes</h2>
+								</div>
+						</div>
+				</div>
+				<div class="custom-row">
 					<div class="custom-col">
-							<div class="header">
-									<h2>Nos Meilleurs Ventes</h2>
-							</div>
+						<div id="product-1" class="single-product">
+								<div class="part-1">
+										<ul>
+												<li><a><i class="fas fa-shopping-cart"></i></a></li>
+												<li><a><i class="fas fa-heart"></i></a></li>
+												<li><a><i class="fas fa-plus"></i></a></li>
+												<li><a><i class="fas fa-expand"></i></a></li>
+										</ul>
+								</div>
+								<div class="part-2">
+										<h3 class="product-title">Here Product Title</h3>
+										<h4 class="product-old-price">$79.99</h4>
+										<h4 class="product-price">$49.99</h4>
+								</div>
+						</div>
 					</div>
-			</div>
-			<div class="custom-row">
-				<div class="custom-col">
-					<div id="product-1" class="single-product">
-							<div class="part-1">
-									<ul>
-											<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-											<li><a href="#"><i class="fas fa-heart"></i></a></li>
-											<li><a href="#"><i class="fas fa-plus"></i></a></li>
-											<li><a href="#"><i class="fas fa-expand"></i></a></li>
-									</ul>
-							</div>
-							<div class="part-2">
-									<h3 class="product-title">Here Product Title</h3>
-									<h4 class="product-old-price">$79.99</h4>
-									<h4 class="product-price">$49.99</h4>
-							</div>
+					<div class="custom-col">
+						<div id="product-2" class="single-product">
+								<div class="part-1">
+										<span class="discount">15% off</span>
+										<ul>
+												<li><a><i class="fas fa-shopping-cart"></i></a></li>
+												<li><a><i class="fas fa-heart"></i></a></li>
+												<li><a><i class="fas fa-plus"></i></a></li>
+												<li><a><i class="fas fa-expand"></i></a></li>
+										</ul>
+								</div>
+								<div class="part-2">
+										<h3 class="product-title">Here Product Title</h3>
+										<h4 class="product-price">$49.99</h4>
+								</div>
+						</div>
 					</div>
-				</div>
-				<div class="custom-col">
-					<div id="product-2" class="single-product">
-							<div class="part-1">
-									<span class="discount">15% off</span>
-									<ul>
-											<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-											<li><a href="#"><i class="fas fa-heart"></i></a></li>
-											<li><a href="#"><i class="fas fa-plus"></i></a></li>
-											<li><a href="#"><i class="fas fa-expand"></i></a></li>
-									</ul>
-							</div>
-							<div class="part-2">
-									<h3 class="product-title">Here Product Title</h3>
-									<h4 class="product-price">$49.99</h4>
-							</div>
-					</div>
-				</div>
-				<div class="custom-col">
-					<div id="product-3" class="single-product">
-							<div class="part-1">
-									<ul>
-											<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-											<li><a href="#"><i class="fas fa-heart"></i></a></li>
-											<li><a href="#"><i class="fas fa-plus"></i></a></li>
-											<li><a href="#"><i class="fas fa-expand"></i></a></li>
-									</ul>
-							</div>
-							<div class="part-2">
-									<h3 class="product-title">Here Product Title</h3>
-									<h4 class="product-old-price">$79.99</h4>
-									<h4 class="product-price">$49.99</h4>
-							</div>
+					<div class="custom-col">
+						<div id="product-3" class="single-product">
+								<div class="part-1">
+										<ul>
+												<li><a><i class="fas fa-shopping-cart"></i></a></li>
+												<li><a><i class="fas fa-heart"></i></a></li>
+												<li><a><i class="fas fa-plus"></i></a></li>
+												<li><a><i class="fas fa-expand"></i></a></li>
+										</ul>
+								</div>
+								<div class="part-2">
+										<h3 class="product-title">Here Product Title</h3>
+										<h4 class="product-old-price">$79.99</h4>
+										<h4 class="product-price">$49.99</h4>
+								</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -98,19 +126,34 @@
     </section>
 
     <section id="my_product">
-		<div class="product-container">
-			<div class="product-image">
-				<img src="../img/montre.png" alt="Image du produit">
-			</div>
-			<div class="product-details">
-				<h2>Montre automatique élégante pour hommes</h2>
-				<div class="div_info_separation"></div>
-				<p>La montre automatique élégante pour hommes est une combinaison parfaite de fonctionnalité et de style. <br>
-					Dotée d'un mouvement automatique de haute précision, cette montre est conçue pour les hommes modernes qui apprécient la qualité et le design sophistiqué.<br>
-					Son boîtier en acier inoxydable résistant aux rayures abrite un cadran finement détaillé, mettant en valeur des marqueurs d'heure lumineux et des aiguilles élégantes. <br>
-					Avec sa résistance à l'eau jusqu'à 50 mètres, cette montre est également adaptée à une utilisation quotidienne et résistera aux éclaboussures et à une immersion accidentelle.<br>
-					Ajoutez une touche de sophistication à votre style avec cette montre automatique pour hommes, un accessoire intemporel qui allie fonctionnalité et élégance.</p>
-				<button>Ajouter au panier</button>
+		<div>
+			<div class="product-container">
+				<div class="product-image">
+					<img src="../img/montre.png" alt="Image du produit">
+				</div>
+				<div class="product-details">
+					<h2>Montre automatique élégante pour hommes</h2>
+					<div class="div_info_separation"></div>
+					<p>
+						La montre automatique élégante pour hommes est une combinaison parfaite de fonctionnalité et de style. <br>
+						Dotée d'un mouvement automatique de haute précision, cette montre est conçue pour les hommes modernes qui apprécient la qualité et le design sophistiqué.<br>
+						Son boîtier en acier 
+						<span class="highlighted" id="conteneur">inoxydable</span>
+						résistant aux rayures abrite un cadran finement détaillé, mettant en valeur des marqueurs d'heure lumineux et des aiguilles élégantes. <br>
+						Avec sa résistance à l'eau jusqu'à 50 mètres, cette montre est également adaptée à une utilisation quotidienne et résistera aux éclaboussures et à une immersion accidentelle.<br>
+						Ajoutez une touche de sophistication à votre style avec cette montre automatique pour hommes, un accessoire intemporel qui allie fonctionnalité et élégance.
+					</p>
+					<div class="texteCache" id="texteCache">
+						<p>
+							Se dit d'un métal ou d'un alliage remarquable par sa résistance à l'oxydation. <br>
+							(Les alliages inoxydables, sont constitués de 13 à 18 % de chrome, <br>
+							éventuellement additionné de nickel.)
+						</p>
+					</div>
+					<div class="mybutton">
+						<button>Ajouter au panier</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -126,6 +169,68 @@
 			</div>
 		</div>
 	</section>
+
+	<section id="contact">
+		<div class="container_contact">
+			<h2>Contactez-nous</h2>
+			<form id="contact-form">
+				<div class="form-group">
+					<label for="nom">Nom :</label>
+					<input type="text" id="nom" name="nom" pattern="[a-zA-Z]{2,}" required>
+					<small id="nom-error" class="error-message"></small>
+				</div>
+				<div class="form-group">
+					<label for="prenom">Prénom :</label>
+					<input type="text" id="prenom" name="prenom" required pattern="[a-zA-Z]{2,}">
+					<small id="prenom-error" class="error-message"></small>
+				</div>
+				<div class="form-group">
+					<label for="date_naissance">Date de naissance :</label>
+					<input type="date" id="date_naissance" name="date_naissance" required>
+					<small id="date_naissance-error" class="error-message"></small>
+				</div>
+				<div class="form-group">
+					<label for="email">Email :</label>
+					<input type="email" id="email" name="email" required>
+					<small id="email-error" class="error-message"></small>
+				</div>
+				<div class="form-group">
+					<label for="telephone">Téléphone :</label>
+					<input required type="tel" id="telephone" name="telephone" pattern="^(0[67]|\+33[67])\d{8}$">
+					<small id="telephone-error" class="error-message"></small>
+					<small class="little">format 0601020304 - 0701020304 - +33601020304 - +33701020304</small>
+				</div>
+				<div class="form-group">
+					<label for="message">Message :</label>
+					<textarea id="message" name="message" rows="4" minlength="30" required></textarea>
+					<small id="message-error" class="error-message"></small>
+				</div>
+				<div class="mybutton">
+					<button type="submit" id="submit-btn">Envoyer</button>
+				</div>
+			</form>
+		</div>
+	</section>
+	
+	
+	<!-- <script>
+		document.getElementById('contact-form').addEventListener('submit', function(event) {
+			event.preventDefault();
+
+			if (this.checkValidity()) {
+				alert("Email envoyé avec succès!");
+				this.reset();
+			} else {
+				let invalidFields = this.querySelectorAll(':invalid');
+				invalidFields.forEach(function(field) {
+					let errorMessage = field.closest('.form-group').querySelector('.error-message');
+					errorMessage.textContent = field.validationMessage;
+				});
+			}
+		});
+	</script> -->
+	
+	
 
     <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
 	<footer class="main-footer">
@@ -145,11 +250,11 @@
 						<span>Social</span>
 					</h2>
 					<div class="main-footer__social-cont">
-						<a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/tim-vannson-805474294/">
+						<a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/alexandre-perez-b3309b267/">
 							<img class="main-footer__icon"
 								src="https://d33wubrfki0l68.cloudfront.net/7f29579dde49e02480372aa49f7189c5536b0118/34b92/assets/png/linkedin-ico.png">
 						</a>
-						<a target="_blank" rel="noreferrer" href="https://github.com/Fr33Ze06?tab=repositories">
+						<a target="_blank" rel="noreferrer" href="https://github.com/Hallexxx">
 							<img class="main-footer__icon"
 								src="https://d33wubrfki0l68.cloudfront.net/5557d5a11584d7201a38ee1a95200f57a4cc0f88/15085/assets/png/github-ico.png">
 						</a>
@@ -161,9 +266,9 @@
 					<h2 class="heading heading-sm text-lt">SuperShop</h2>
 					<ul class="footer-menu">
 						<li><a href="#" class="footer-link">Accueil</a></li>
-						<li><a href="#" class="footer-link">Product</a></li>
-						<li><a href="#" class="footer-link">À propos</a></li>
-						<li><a href="#" class="footer-link">Contact</a></li>
+						<li><a href="#section-products" class="footer-link">Product</a></li>
+						<li><a href="#video" class="footer-link">À propos</a></li>
+						<li><a href="contact#" class="footer-link">Contact</a></li>
 					</ul>
 				</div>
 			</div>
